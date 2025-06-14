@@ -5,56 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>رزومه من</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <header>
+            <div class="profile-image">
+                <img src="profile-image.jpg" alt="تصویر پروفایل" id="profile-img">
+            </div>
             <h1 id="name">نام و نام خانوادگی</h1>
-            <p id="contact">ایمیل: example@email.com | تلفن: ۰۹۱۲۳۴۵۶۷۸۹</p>
+            <p id="title">عنوان شغلی</p>
+            <div id="contact">
+                <p><i class="fas fa-envelope"></i> <span id="email">example@email.com</span></p>
+                <p><i class="fas fa-phone"></i> <span id="phone">۰۹۱۲۳۴۵۶۷۸۹</span></p>
+                <p><i class="fas fa-map-marker-alt"></i> <span id="location">تهران، ایران</span></p>
+            </div>
         </header>
 
-        <section class="summary">
-            <h2>خلاصه</h2>
-            <p>یک متخصص با تجربه در زمینه [حوزه تخصصی شما] با بیش از [تعداد] سال سابقه کار. علاقه‌مند به [زمینه‌های مورد علاقه] و متمرکز بر [اهداف حرفه‌ای].</p>
-        </section>
-
-        <section class="education">
-            <h2>تحصیلات</h2>
-            <div class="education-item">
-                <h3>نام دانشگاه</h3>
-                <p>مقطع تحصیلی، رشته تحصیلی</p>
-                <p class="date">سال فارغ‌التحصیلی</p>
-            </div>
-        </section>
-
-        <section class="experience">
-            <h2>تجربیات کاری</h2>
-            <div class="job">
-                <h3>عنوان شغلی</h3>
-                <p class="company">نام شرکت</p>
-                <p class="date">تاریخ شروع - تاریخ پایان</p>
-                <ul>
-                    <li>دستاورد یا مسئولیت ۱</li>
-                    <li>دستاورد یا مسئولیت ۲</li>
-                    <li>دستاورد یا مسئولیت ۳</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="skills">
-            <h2>مهارت‌ها</h2>
-            <ul id="skills-list">
-                <!-- مهارت‌ها از طریق JavaScript اضافه خواهند شد -->
-            </ul>
-        </section>
-
-        <section class="languages">
-            <h2>زبان‌ها</h2>
+        <nav>
             <ul>
-                <li>فارسی (زبان مادری)</li>
-                <li>انگلیسی (سطح تسلط خود را بنویسید)</li>
+                <li><a href="#summary">خلاصه</a></li>
+                <li><a href="#education">تحصیلات</a></li>
+                <li><a href="#experience">تجربیات کاری</a></li>
+                <li><a href="#skills">مهارت‌ها</a></li>
+                <li><a href="#languages">زبان‌ها</a></li>
             </ul>
-        </section>
+        </nav>
+
+        <main>
+            <section id="summary" class="summary">
+                <h2>خلاصه</h2>
+                <p id="summary-text">یک متخصص با تجربه در زمینه [حوزه تخصصی شما] با بیش از [تعداد] سال سابقه کار. علاقه‌مند به [زمینه‌های مورد علاقه] و متمرکز بر [اهداف حرفه‌ای].</p>
+            </section>
+
+            <section id="education" class="education">
+                <h2>تحصیلات</h2>
+                <div class="education-item">
+                    <h3>نام دانشگاه</h3>
+                    <p>مقطع تحصیلی، رشته تحصیلی</p>
+                    <p class="date">سال فارغ‌التحصیلی</p>
+                </div>
+            </section>
+
+            <section id="experience" class="experience">
+                <h2>تجربیات کاری</h2>
+                <div class="job">
+                    <h3>عنوان شغلی</h3>
+                    <p class="company">نام شرکت</p>
+                    <p class="date">تاریخ شروع - تاریخ پایان</p>
+                    <ul>
+                        <li>دستاورد یا مسئولیت ۱</li>
+                        <li>دستاورد یا مسئولیت ۲</li>
+                        <li>دستاورد یا مسئولیت ۳</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="skills" class="skills">
+                <h2>مهارت‌ها</h2>
+                <div id="skills-container">
+                    <!-- مهارت‌ها از طریق JavaScript اضافه خواهند شد -->
+                </div>
+            </section>
+
+            <section id="languages" class="languages">
+                <h2>زبان‌ها</h2>
+                <ul id="languages-list">
+                    <!-- زبان‌ها از طریق JavaScript اضافه خواهند شد -->
+                </ul>
+            </section>
+        </main>
     </div>
 
     <script src="script.js"></script>

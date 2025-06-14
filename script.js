@@ -33,4 +33,45 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
+document.addEventListener('DOMContentLoaded', () => {
+    // اطلاعات شخصی
+    document.getElementById('name').textContent = 'علی محمدی';
+    document.getElementById('title').textContent = 'توسعه‌دهنده نرم‌افزار ارشد';
+    document.getElementById('email').textContent = 'ali.mohammadi@email.com';
+    document.getElementById('phone').textContent = '۰۹۱۲۳۴۵۶۷۸۹';
+    document.getElementById('location').textContent = 'تهران، ایران';
+    document.getElementById('summary-text').textContent = 'توسعه‌دهنده نرم‌افزار با بیش از 5 سال تجربه در طراحی و پیاده‌سازی راه‌حل‌های نرم‌افزاری مقیاس‌پذیر. متخصص در JavaScript، React و Node.js با تمرکز بر بهینه‌سازی عملکرد و تجربه کاربری.';
+
+    // مهارت‌ها
+    const skills = ['JavaScript', 'React', 'Node.js', 'TypeScript', 'GraphQL', 'Docker', 'AWS', 'Git'];
+    const skillsContainer = document.getElementById('skills-container');
+    skills.forEach(skill => {
+        const skillElement = document.createElement('span');
+        skillElement.classList.add('skill');
+        skillElement.textContent = skill;
+        skillsContainer.appendChild(skillElement);
+    });
+
+    // زبان‌ها
+    const languages = [
+        { name: 'فارسی', level: 'زبان مادری' },
+        { name: 'انگلیسی', level: 'پیشرفته' },
+        { name: 'عربی', level: 'متوسط' }
+    ];
+    const languagesList = document.getElementById('languages-list');
+    languages.forEach(lang => {
+        const li = document.createElement('li');
+        li.innerHTML = `<span class="language-name">${lang.name}</span> <span class="language-level">${lang.level}</span>`;
+        languagesList.appendChild(li);
+    });
+
+    // انیمیشن اسکرول نرم
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 });
